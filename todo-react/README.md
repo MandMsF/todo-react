@@ -1,16 +1,29 @@
-# React + Vite
+# ToDo App（React）
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## アプリ概要
+Reactの学習を目的として作成したシンプルなToDoアプリです。  
+タスクの追加・完了・削除ができます。
 
-Currently, two official plugins are available:
+## 使用技術
+- React
+- Vite
+- JavaScript（ES6）
+- CSS
+- localStorage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 機能
+- タスクの追加
+- チェックボックスによる完了／未完了の切り替え
+- 完了タスクの打ち消し表示
+- タスクの削除
+- localStorage によるデータ保存
 
-## React Compiler
+## 工夫した点
+- state は App コンポーネントで一元管理し、子コンポーネントへ props として渡す構成にしました
+- React の基本である「親でロジック管理、子で表示」を意識して実装しました
+- ページをリロードしてもタスクが消えないよう localStorage を使用しました
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 今後の改善案
+- 編集機能の追加
+- フィルター（未完了／完了）の実装
+- デザインの改善
